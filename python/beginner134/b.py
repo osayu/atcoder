@@ -1,5 +1,6 @@
 import io
 import sys
+from math import ceil
 
 
 def IN_S():
@@ -29,17 +30,20 @@ def T_IN():
 
 
 test_str = '''
-5
-1 3 5 4 2
+20 1
 '''
 
 
 def MAIN():
-  T_IN()
+  # T_IN()
   A()
 
 
 def A():
+  n, d = IN_L_I()
+
+  print(ceil(n / (d * 2 + 1)))
+
   return None
 
 

@@ -29,10 +29,9 @@ def T_IN():
 
 
 test_str = '''
-5
-1 3 5 4 2
+14
+99592 10342 29105 78532 83018 11639 92015 77204 30914 21912 34519 80835 100000 1
 '''
-
 
 def MAIN():
   # T_IN()
@@ -40,8 +39,13 @@ def MAIN():
 
 
 def A():
+  num = IN_I()
+  lists = IN_L_I()
+  lists.sort()
+
+  print(lists[num // 2] - lists[num // 2 - 1])
   return None
- 
+
 
 def B():
   return None

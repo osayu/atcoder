@@ -33,15 +33,17 @@ test_str = '''
 1 3 5 4 2
 '''
 
+# sort済みリストで左右に要素を追加する場合
+# dequeを使う
 
 def MAIN():
-  T_IN()
+  # T_IN()
   A()
 
 
 def A():
   return None
-
+ 
 
 def B():
   return None

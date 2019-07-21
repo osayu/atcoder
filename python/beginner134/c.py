@@ -29,17 +29,32 @@ def T_IN():
 
 
 test_str = '''
+2
 5
-1 3 5 4 2
+5
 '''
 
 
 def MAIN():
-  T_IN()
+  # T_IN()
   A()
 
 
 def A():
+  n = IN_I()
+  l = []
+  for i in range(0, n):
+    l.append(IN_I())
+
+  l2 = l.copy()
+  l.sort()
+
+  for i in l2:
+    if i == l[-1]:
+      print(l[-2])
+    else:
+      print(l[-1])
+
   return None
 
 

@@ -1,5 +1,7 @@
 import io
 import sys
+from bisect import bisect_right, bisect_left
+from collections import deque
 
 
 def IN_S():
@@ -29,17 +31,38 @@ def T_IN():
 
 
 test_str = '''
-5
-1 3 5 4 2
+7
+1
+0
+3
+4
+1
+2
+1
 '''
 
 
 def MAIN():
-  T_IN()
+  # T_IN()
   A()
 
 
 def A():
+  n = IN_I()
+
+  l = deque([IN_I()])
+
+  for i in range(0, n - 1):
+    num = IN_I()
+
+    idx = bisect_left(l, num)
+    if idx == 0:
+      l.appendleft(num)
+    else:
+      l[idx - 1] = num
+    # print(l)
+
+  print(len(l))
   return None
 
 
